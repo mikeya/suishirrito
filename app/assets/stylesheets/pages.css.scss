@@ -1,0 +1,54 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'bootstrap';
+@import url(http://fonts.googleapis.com/css?family=Questrial|Days+One);
+
+
+h1,h2,h3,h4,a {
+  font-family: 'Questrial', sans-serif;
+}
+
+p, span {
+  font-family: 'Days One', sans-serif;
+}
+
+.logo {
+  padding: 60px 0;
+}
+
+.dark {
+  background: rgba(0, 0, 0, .2);
+  padding: 10px 0;
+}
+
+.nav {
+  a{
+    color:#ffffff;
+    font-size: 18px;
+  }
+}
+
+img {
+  width:100%;
+}
+
+.col-centered{
+  float: none;
+  margin: 0 auto;
+}
+
+.texture {
+  background: {
+    image:url('/assets/texture.jpg');
+    size: cover;
+  }
+}
+
+.hero {
+  height: 300px;
+  background: {
+    image:url('/assets/hero_bg.jpg');
+    size: cover;
+  }
+}
