@@ -4,13 +4,38 @@
 @import 'bootstrap';
 @import url(http://fonts.googleapis.com/css?family=Questrial|Days+One);
 
+$orange: #DE5D31;
+$yellow: #F8AF4B;
+$brown: #744A25;
+$green:#AEB341;
+$white: #FFFFFF;
 
-h1,h2,h3,h4,a {
-  font-family: 'Questrial', sans-serif;
+h1,h2,h3 {
+  font-family: 'Days One', sans-serif;
 }
 
-p, span {
-  font-family: 'Days One', sans-serif;
+h1, h2{
+  color: $orange;
+}
+
+h3{
+  color:$yellow;
+}
+
+p, span, a, h4 {
+  font-family: 'Questrial', sans-serif;
+  color:$brown;
+}
+
+p {
+  font-size: 20px;
+}
+
+a{
+  &:hover{
+    color:$white;
+    text-decoration: none;
+  }
 }
 
 .logo {
@@ -23,8 +48,8 @@ p, span {
 }
 
 .nav {
+  white-space: nowrap;
   a{
-    color:#ffffff;
     font-size: 18px;
   }
 }
@@ -43,12 +68,165 @@ img {
     image:url('/assets/texture.jpg');
     size: cover;
   }
+  p,a,span {
+    color:$white;
+  }
+  h3{
+    margin-top:40px;
+  }
+  div p:last-child{
+    margin-bottom: 40px;
+  }
 }
 
 .hero {
-  height: 300px;
   background: {
     image:url('/assets/hero_bg.jpg');
     size: cover;
   }
+  margin-bottom: 40px;
+  border-bottom:1px dashed $yellow;
+  h1 {
+    color:$brown;
+    font-size:42px;
+    margin-top:50px;
+    span {
+      color: $orange;
+      font-family: 'Days One', sans-serif;
+    }
+  }
+  p{
+    font-size:26px;
+  }
 }
+
+.hand-2, .hand-1 {
+  height: 330px;
+  background: {
+    size: cover;
+  }
+}
+
+.hand-1 {
+  background:{
+    image:url('/assets/sumo_hand1.png');
+  }
+}
+
+.hand-2 {
+  background:{
+    image:url('/assets/sumo_hand2.png');
+  }
+}
+
+.orders {
+  p {
+    width:85%;
+    margin-bottom: 20px;
+  }
+  .col-md-12 {
+    margin-bottom:20px;
+  }
+  margin-bottom:40px;
+}
+
+.directions {
+  h2{
+    margin-top:40px;
+  }
+  h4 {
+    color: $orange;
+  }
+  p {
+    font-size:16px;
+    span {
+      color:$orange;
+      font-family: 'Questrial', sans-serif;
+    }
+  }
+  h3 {
+    color:$orange;
+    font-family: 'Questrial', sans-serif;
+  }
+  button {
+    width:100%;
+    bottom:0px;
+    left:0px;
+    position:relative;
+  }
+  > div {
+    height:200px;
+  }
+  .hours {
+    p {
+      margin:0;
+    }
+  }
+  .direction-ctas button{
+    margin-bottom:40px;
+  }
+}
+
+button.btn-default {
+  background-color:$green;
+  border-radius:0;
+  padding:5px 30px;
+  a{
+    color:$white;
+    font-size:16px;
+  }
+  &:hover {
+    background-color:$green;
+  }
+}
+
+footer {
+  height:80px;
+  padding-top:30px;
+  background:#000000;
+  span,a{
+    color:$white;
+  }
+  a {
+    font-size:16px;
+    margin-left:30px;
+    display: inline-block;
+    vertical-align: middle;
+    &:first-child{
+      margin:0px;
+    }
+    &.instagram, &.twitter, &.facebook {
+      height:20px;
+      width:23px;
+      margin-left:10px;
+      background:{
+        repeat:no-repeat;
+        position:center 0;
+      }
+    }
+
+    &.instagram {
+      background:{
+        image:url('/assets/instagram.png');
+      }
+    }
+
+    &.twitter {
+      background:{
+        image:url('/assets/twitter.png');
+      }
+    }
+    &.facebook {
+      width:10px;
+      margin-left:30px;
+      background:{
+        image:url('/assets/facebook.png');
+      }
+    }
+  }
+
+
+
+}
+
+
