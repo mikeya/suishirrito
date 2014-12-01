@@ -9,20 +9,58 @@ $yellow: #F8AF4B;
 $brown: #744A25;
 $green:#AEB341;
 $white: #FFFFFF;
+$black: #000000;
+$red: #D6664A;
 
+div.yellow {
+  background-color:$yellow;
+}
+body {
+  background:$black;
+}
+.container-fluid{
+  background:$white;
+}
+
+.center-block {
+  @include clearfix();
+  float: none;
+}
 h1,h2,h3 {
   font-family: 'Days One', sans-serif;
 }
 
 h1, h2{
-  color: $orange;
+   color: $orange;
+ }
+
+h1,h2,h3,h4,h5,p,span,a,label{
+  &.orange{
+    color:$orange;
+  }
+  &.yellow{
+    color:$yellow;
+  }
+  &.white{
+    color:$white;
+  }
+  &.black{
+    color:$black;
+  }
+  &.brown{
+    color:$brown;
+  }
 }
 
 h3{
   color:$yellow;
 }
 
-p, span, a, h4 {
+label{
+  color:$white;
+}
+
+p, span, a, h4,button {
   font-family: 'Questrial', sans-serif;
   color:$brown;
 }
@@ -36,6 +74,12 @@ a{
     color:$white;
     text-decoration: none;
   }
+}
+
+hr {
+  @include clearfix();
+  border-top: 1px solid $black;
+  margin:40px 0;
 }
 
 .logo {
@@ -108,6 +152,7 @@ img {
 }
 
 .hand-1 {
+  height: 400px;
   background:{
     image:url('/assets/sumo_hand1.png');
   }
@@ -155,7 +200,7 @@ img {
     position:relative;
   }
   > div {
-    height:200px;
+    margin-bottom: 40px;
   }
   .hours {
     p {
@@ -171,27 +216,80 @@ button.btn-default {
   background-color:$green;
   border-radius:0;
   padding:5px 30px;
+  color:$white;
+  border-color:#ACA9B2;
+  font-size:18px;
   a{
     color:$white;
-    font-size:16px;
+    font-size:18px;
   }
   &:hover {
     background-color:$green;
   }
 }
 
+button.btn-info {
+  background-color:$white;
+  border-radius:3px;
+  padding:5px 30px;
+  color:$red;
+  border-color:#ACA9B2;
+  font-size:18px;
+  a{
+    color:$red;
+    &:hover {
+      color:$red;
+    }
+  }
+  &:hover {
+    color:$red;
+    background-color:$white;
+    border-color:#ACA9B2;
+  }
+}
+
+
+.contact {
+  padding-bottom:40px;
+  background-color:$yellow;
+  h2{
+    color:$black;
+  }
+  p {
+    color: $white;
+  }
+  textarea {
+    min-height: 185px;
+  }
+  button {
+    float:right;
+  }
+}
+
 footer {
   height:80px;
   padding-top:30px;
-  background:#000000;
-  span,a{
+  background:$black;
+  span{
     color:$white;
   }
+  .about_nav {
+    text-align: right;
+    background-color:$black;
+    padding:0px;
+  }
+}
+
+.about_nav {
+  text-align: center;
+  background-color:$yellow;
+  padding:10px 0;
   a {
     font-size:16px;
     margin-left:30px;
     display: inline-block;
     vertical-align: middle;
+    color:$white;
     &:first-child{
       margin:0px;
     }
@@ -224,9 +322,6 @@ footer {
       }
     }
   }
-
-
-
 }
 
 

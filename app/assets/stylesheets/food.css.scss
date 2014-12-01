@@ -1,0 +1,15 @@
+.food {
+  margin:40px 0;
+  border-bottom:1px solid #464646;
+  button {
+    margin-top:20px;
+    &:first-of-type {
+      margin-right:20px;
+    }
+  }
+}
+
+
+.food-sub{
+  margin-bottom:40px;
+}

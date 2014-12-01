@@ -1,2 +1,138 @@
-<h1>Pages#catering</h1>
-<p>Find me in app/views/pages/catering.html.erb</p>
+<div class="container catering">
+    <h2 class="text-center">Sushirrito Catering</h2>
+    <p class="brown text-center">Perfect for any business meeting, event or party - serving as few as 5 or as many as 200. Make your next meeting or party a hit. Introducing fast, fresh, filling and eco-friendly sushi..a fresh way to roll!</p>
+    <p class="orange text-center">Please fill out this form or call (415) 429-7611 to place your catering order!</p>
+    <div class="yellow clearfix">
+        <div class="col-md-12">
+            <h3 class="brown text-center header">Catering Request Form</h3>
+            <p class=" text-center"><b>Your Contact Information</b></p>
+
+            <div class="col-md-10 center-block">
+                <div class="col-md-6">
+                    <div class="form-group"><label for="name">Name*</label><input type="text" id="name" class="form-control"/></div>
+                    <div class="form-group"><label for="email">Email*</label><input type="text" id="email" class="form-control"/></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group"><label for="company">Company</label><input type="text" id="company" class="form-control"/></div>
+                    <div class="form-group"><label for="phone">Phone*</label><input type="text" id="phone" class="form-control"/></div>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class="text-center">
+                <p class=" header"><b>What is your catering event date?</b></p>
+                <div class="col-md-4 center-block">
+                    <input class="form-control" name="date" type="text"/>
+                </div>
+
+
+                <p class=" header"><b>Is your order for delivery or pick up?</b></p>
+                <p class="">Delivery is available in San Francisco only with a 10% service charge, at a minimum of $10. Catering orders for pick up must be picked up before noon.</p>
+                <button class="btn btn-info ">Delivery</button>
+                <button class="btn btn-info ">Pick Up</button>
+
+                <div class="delivery">
+                    <p class="header"><b>Delivery details</b></p>
+                    <div class="col-md-10 center-block">
+                        <div class="col-md-6"><label for="address">Address*</label><input id="address" class="form-control" type="text"/></div>
+                        <div class="col-md-6"><label for="time">Delivery Time (between 11am and 3pm)*</label><input id="time" class="form-control" type="text"/></div>
+                    </div>
+                </div>
+
+                <div class="pickup">
+                    <p class="header"><b>Select Pickup Location</b></p>
+                    <button class="btn btn-info"><a href="">Sushirrito Fidi</a><span>475 Sansome Street</span></button>
+                    <button class="btn btn-info"><a href="">Sushirrito Soma</a><span>59 New Montgomery Street</span></button>
+                    <button class="btn btn-info"><a href="">Sushirrito Union Square</a><span>226 Kearny Street</span></button>
+                </div>
+                
+            </div>
+
+            <hr/>
+            <div class="text-center">
+                <p class=" header"><b>Enter your menu item quantities</b></p>
+                <p class="">There is a 5 item minimum for all catering orders</p>
+            </div>
+
+            <div class="quantities clearfix">
+                <div class="col-md-4">
+                    <div class="col-xs-6">
+                        <p>Satori</p>
+                        <p class="small">(10 available)</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <p>12.00 x</p>
+                        <input class="form-control" type="text"/>
+                    </div>
+                    <div class="col-xs-6">
+                        <p>Geisha's Kiss</p>
+                        <p class="small">(10 available)</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <p>11.00 x</p>
+                        <input class="form-control" type="text"/>
+                    </div>
+                    <div class="col-xs-6">
+                        <p>Salmon Samba</p>
+                        <p class="small">(10 available)</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <p>10.00 x</p>
+                        <input class="form-control" type="text"/>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="col-xs-6">
+                        <p>Sumo Crunch</p>
+                        <p class="small">(10 available)</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <p>10.50x</p>
+                        <input class="form-control" type="text"/>
+                    </div>
+                    <div class="col-xs-6">
+                        <p>Prokivore</p>
+                        <p class="small">(10 available)</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <p>9.50 x</p>
+                        <input class="form-control" type="text"/>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="col-xs-6">
+                        <p>Bonsai Salad</p>
+                        <p class="small">(10 available)</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <p>10.00 x</p>
+                        <input class="form-control" type="text"/></div>
+                    <div class="col-xs-6">
+                        <p>Lava Nachos</p>
+                        <p class="small">(10 available)</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <p>8.00 x</p>
+                        <input class="form-control" type="text"/>
+                    </div>
+                    <div class="col-xs-6">
+                        <p>Diablo Sauce</p>
+                        <p class="small">(10 available)</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <p>1.00 x</p>
+                        <input class="form-control" type="text"/>
+                    </div>
+                </div>
+            </div>
+
+            <hr/>
+
+            <p class="text-center">Orders must be placed 48 hours prior to your event. However, we may be able to accommodate orders placed the day before or same day depending upon availability. For same-day cancellations we reserve the right to charge up to 50% of the order total.</p>
+            <p class="text-center">Orders are not finalized until confirmed by our catering manager.</p>
+
+            <button class="btn btn-default center-block">Submit Catering Request</button>
+        </div>
+    </div>
+</div>
