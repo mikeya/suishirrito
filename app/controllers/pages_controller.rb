@@ -8,6 +8,12 @@ class PagesController < ApplicationController
   def food
   end
 
+  def sf
+  end
+
+  def pa
+  end
+
   def catering
   end
 

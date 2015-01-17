@@ -15,16 +15,19 @@
       }
     }
   }
-  button.btn-info{
-    margin-left:20px;
+  button.btn-info, button.btn-info:focus, button.btn-info:active, button.btn-default, button.btn-default:focus, button.btn-default:active{
+    margin:0 0 20px 20px;
     padding:10px 60px;
     font-size:22px;
     &:first-child{
       margin-left:0px;
     }
+    &.center-block{
+      margin: 0 auto;
+    }
   }
   .pickup{
-    button.btn-info {
+    button.btn-info, button.btn-default{
       padding:20px 60px;
       span {
         font-size:18px;
@@ -32,6 +35,12 @@
         display:block;
       }
     }
+    button.btn-default span{
+      color:$white;
+    }
+  }
+  .delivery, .pickup{
+    display:none;
   }
 
 

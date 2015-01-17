@@ -9,44 +9,46 @@
 
             <div class="col-md-10 center-block">
                 <div class="col-md-6">
-                    <div class="form-group"><label for="name">Name*</label><input type="text" id="name" class="form-control"/></div>
-                    <div class="form-group"><label for="email">Email*</label><input type="text" id="email" class="form-control"/></div>
+                    <div class="form-group"><label for="name">Name*</label><input type="text" id="name" name="name" class="form-control"/></div>
+                    <div class="form-group"><label for="email">Email*</label><input type="text" id="email" name="email" class="form-control"/></div>
                 </div>
                 <div class="col-md-6">
-                    <div class="form-group"><label for="company">Company</label><input type="text" id="company" class="form-control"/></div>
-                    <div class="form-group"><label for="phone">Phone*</label><input type="text" id="phone" class="form-control"/></div>
+                    <div class="form-group"><label for="company">Company</label><input type="text" id="company" name="company" class="form-control"/></div>
+                    <div class="form-group"><label for="phone">Phone*</label><input type="text" id="phone" name="phone" class="form-control"/></div>
                 </div>
             </div>
 
             <hr/>
 
             <div class="text-center">
-                <p class=" header"><b>What is your catering event date?</b></p>
+                <p class="header"><b>What is your catering event date?</b></p>
                 <div class="col-md-4 center-block">
-                    <input class="form-control" name="date" type="text"/>
+                    <input class="form-control" name="event_date" type="text"/>
                 </div>
 
 
-                <p class=" header"><b>Is your order for delivery or pick up?</b></p>
-                <p class="">Delivery is available in San Francisco only with a 10% service charge, at a minimum of $10. Catering orders for pick up must be picked up before noon.</p>
-                <button class="btn btn-info ">Delivery</button>
-                <button class="btn btn-info ">Pick Up</button>
+                <p class="header"><b>Is your order for delivery or pick up?</b></p>
+                <p>Delivery is available in San Francisco only with a 10% service charge, at a minimum of $10. Catering orders for pick up must be picked up before noon.</p>
+                <button class="btn btn-info delivery_btn" data-type="delivery">Delivery</button>
+                <button class="btn btn-info pickup_btn" data-type="pickup">Pick Up</button>
+                <input name="order_type" id="order_type" type="hidden"/>
 
                 <div class="delivery">
                     <p class="header"><b>Delivery details</b></p>
                     <div class="col-md-10 center-block">
-                        <div class="col-md-6"><label for="address">Address*</label><input id="address" class="form-control" type="text"/></div>
-                        <div class="col-md-6"><label for="time">Delivery Time (between 11am and 3pm)*</label><input id="time" class="form-control" type="text"/></div>
+                        <div class="col-md-6"><label for="delivery_address">Address*</label><input id="delivery_address" name="delivery_address" class="form-control" type="text"/></div>
+                        <div class="col-md-6"><label for="delivery_time">Delivery Time (between 11am and 3pm)*</label><input id="delivery_time" name="delivery_time" class="form-control" type="text"/></div>
                     </div>
                 </div>
 
                 <div class="pickup">
                     <p class="header"><b>Select Pickup Location</b></p>
-                    <button class="btn btn-info"><a href="">Sushirrito Fidi</a><span>475 Sansome Street</span></button>
-                    <button class="btn btn-info"><a href="">Sushirrito Soma</a><span>59 New Montgomery Street</span></button>
-                    <button class="btn btn-info"><a href="">Sushirrito Union Square</a><span>226 Kearny Street</span></button>
+                    <button class="btn btn-info"><a>Sushirrito Fidi</a><span>475 Sansome Street</span></button>
+                    <button class="btn btn-info"><a>Sushirrito Soma</a><span>59 New Montgomery Street</span></button>
+                    <button class="btn btn-info"><a>Sushirrito Union Square</a><span>226 Kearny Street</span></button>
+                    <input name="pickup_location" id="pickup_location" type="hidden" />
                 </div>
-                
+
             </div>
 
             <hr/>
@@ -136,3 +138,37 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function(){
+        $('.delivery_btn, .pickup_btn').on('click',function(){
+            $(this).toggleClass('btn-info btn-default');
+            if($(this).hasClass('btn-info')){
+                $('#order_type').val('');
+            }else if($(this).hasClass('btn-default')){
+                $('#order_type').val($(this).data('type'));
+            }
+            $('.'+$(this).data('type')).slideToggle();
+        });
+
+        $('.delivery_btn').on('click',function(){
+            $('.pickup_btn').removeClass('btn-default').addClass('btn-info');
+            $('#delivery_address').val('');
+            $('#delivery_time').val('');
+            $('.pickup').slideUp();
+        });
+
+        $('.pickup_btn').on('click',function(){
+            $('.delivery_btn').removeClass('btn-default').addClass('btn-info');
+            $('.pickup .btn').removeClass('btn-default').addClass('btn-info');
+            $('#pickup_location').val('');
+            $('.delivery').slideUp();
+        });
+
+        $('.pickup .btn').on('click',function(){
+            $('.pickup .btn.btn-default').toggleClass('btn-info btn-default');
+            $(this).toggleClass('btn-info btn-default');
+            $('#pickup_location').val($(this).children('span').text());
+        });
+    });
+</script>

@@ -3,7 +3,9 @@
 <head>
   <title>Suishirrito</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVqjpx3iTNBBe9cs4r8leIJpn4mq147u4"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -18,27 +20,26 @@
             <div class="dark clearfix">
                 <div class="container">
                     <div class="col-md-10 col-centered text-center nav">
-                        <div class="col-md-2 "><%= link_to "Food", "/food" %></div>
-                        <div class="col-md-2"><%= link_to "Locations", "/locations" %></div>
-                        <div class="col-md-2"><%= link_to "Catering", "/catering" %></div>
-                        <div class="col-md-2"><%= link_to "About Us", "/about" %></div>
-                        <div class="col-md-2"><%= link_to "Contact", "/contact" %></div>
-                        <div class="col-md-2"><%= link_to "Jobs", "/jobs" %></div>
+                        <div class="col-md-2 "><%= link_to "Food", "/food", class: cp('/food')%></div>
+                        <div class="col-md-2"><%= link_to "Locations", "/locations", class: cp('/locations')%></div>
+                        <div class="col-md-2"><%= link_to "Catering", "/catering", class: cp('/catering')%></div>
+                        <div class="col-md-2"><%= link_to "About Us", "#about", class: 'about' %></div>
+                        <div class="col-md-2"><%= link_to "Contact", "#contact", class:'contact' %></div>
+                        <div class="col-md-2"><%= link_to "Jobs", "/jobs", class: cp('/jobs')%></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="yellow">
+        <div class="yellow about_nav_container">
             <div class="container">
                 <%= render "shared/about_nav" %>
             </div>
         </div>
-
        <%= yield %>
     </div>
 </div>
 
-<div class="contact">
+<div class="contact_container" id="contact">
     <div class="container">
         <h2 class="text-center black">Contact Us</h2>
         <p class="text-center white">If you have any questions or just want to say Hello, we would love to hear from you!</p>

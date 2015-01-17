@@ -1,2 +1,63 @@
-<h1>Pages#locations</h1>
-<p>Find me in app/views/pages/locations.html.erb</p>
+
+<div id="locations">
+    <%= render "shared/locations" %>
+</div>
+<script>
+    $(document).ready(function(){
+        function initMaps() {
+
+            var fidiLatLng = new google.maps.LatLng(37.794732,-122.401772);
+            var fidiOpts = {
+                center: fidiLatLng,
+                zoom: 16
+            };
+            var fidiMap = new google.maps.Map(document.getElementById('map-fidi'), fidiOpts);
+            var fidiMarker = new google.maps.Marker({
+                position: fidiLatLng,
+                map: fidiMap
+            });
+
+            fidiMarker.setMap(fidiMap);
+
+            var somaLatLng = new google.maps.LatLng(37.788117, -122.401106);
+            var somaOpts = {
+                center: somaLatLng,
+                zoom: 16
+            };
+            var somaMap = new google.maps.Map(document.getElementById('map-soma'), somaOpts);
+            var somaMarker = new google.maps.Marker({
+                position: somaLatLng,
+                map: somaMap
+            });
+
+            somaMarker.setMap(somaMap);
+
+            var usLatLng = new google.maps.LatLng(37.790206, -122.403954);
+            var usOpts = {
+                center: usLatLng,
+                zoom: 16
+            };
+            var usMap = new google.maps.Map(document.getElementById('map-us'), usOpts);
+            var usMarker = new google.maps.Marker({
+                position: usLatLng,
+                map: usMap
+            });
+
+            usMarker.setMap(usMap);
+
+            var paLatLng = new google.maps.LatLng(37.447628, -122.159718);
+            var paOpts = {
+                center: paLatLng,
+                zoom: 16
+            };
+            var paMap = new google.maps.Map(document.getElementById('map-pa'), paOpts);
+            var paMarker = new google.maps.Marker({
+                position: paLatLng,
+                map: paMap
+            });
+
+            paMarker.setMap(paMap);
+        }
+        google.maps.event.addDomListener(window, 'load', initMaps);
+    });
+</script>

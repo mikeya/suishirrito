@@ -74,6 +74,9 @@ a{
     color:$white;
     text-decoration: none;
   }
+  &.current {
+    color:$brown !important;
+  }
 }
 
 hr {
@@ -144,6 +147,10 @@ img {
   }
 }
 
+.about_nav_container{
+  display:none;
+}
+
 .hand-2, .hand-1 {
   height: 330px;
   background: {
@@ -176,6 +183,7 @@ img {
 }
 
 .directions {
+  @extend .text-center;
   h2{
     margin-top:40px;
   }
@@ -198,9 +206,13 @@ img {
     bottom:0px;
     left:0px;
     position:relative;
+    margin-bottom: 20px;
   }
   > div {
     margin-bottom: 40px;
+  }
+  .col-md-9 {
+    display:none;
   }
   .hours {
     p {
@@ -212,31 +224,37 @@ img {
   }
 }
 
-button.btn-default {
+
+button.btn-default, button.btn-default:focus, button.btn-default:active {
   background-color:$green;
   border-radius:0;
   padding:5px 30px;
   color:$white;
   border-color:#ACA9B2;
   font-size:18px;
+  outline:0;
   a{
     color:$white;
     font-size:18px;
+    outline:0;
   }
   &:hover {
     background-color:$green;
   }
 }
 
-button.btn-info {
+button.btn-info, button.btn-info:focus, button.btn-info:active {
   background-color:$white;
   border-radius:3px;
   padding:5px 30px;
   color:$red;
   border-color:#ACA9B2;
   font-size:18px;
+  outline:0;
   a{
     color:$red;
+    font-size:18px;
+    outline:0;
     &:hover {
       color:$red;
     }
@@ -249,9 +267,10 @@ button.btn-info {
 }
 
 
-.contact {
+.contact_container {
   padding-bottom:40px;
   background-color:$yellow;
+  display: none;
   h2{
     color:$black;
   }
@@ -280,7 +299,7 @@ footer {
   }
 }
 
-.about_nav {
+.about_nav, .locations_nav {
   text-align: center;
   background-color:$yellow;
   padding:10px 0;
