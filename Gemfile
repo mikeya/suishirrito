@@ -40,3 +40,5 @@ gem 'spring',        group: :development
 
 gem 'bootstrap-sass'
 
+gem 'mysql2'
+
