@@ -112,7 +112,7 @@ img {
 
 .texture {
   background: {
-    image:url('/assets/texture.jpg');
+    image:url(image-path('/assets/texture.jpg'));
     size: cover;
   }
   p,a,span {
@@ -128,7 +128,7 @@ img {
 
 .hero {
   background: {
-    image:url('/assets/hero_bg.jpg');
+    image:url(image-path('/assets/hero_bg.jpg'));
     size: cover;
   }
   margin-bottom: 40px;
@@ -161,13 +161,13 @@ img {
 .hand-1 {
   height: 400px;
   background:{
-    image:url('/assets/sumo_hand1.png');
+    image:url(image-path('/assets/sumo_hand1.png'));
   }
 }
 
 .hand-2 {
   background:{
-    image:url('/assets/sumo_hand2.png');
+    image:url(image-path('/assets/sumo_hand2.png'));
   }
 }
 
@@ -324,20 +324,20 @@ footer {
 
     &.instagram {
       background:{
-        image:url('/assets/instagram.png');
+        image:url(image-path('/assets/instagram.png'));
       }
     }
 
     &.twitter {
       background:{
-        image:url('/assets/twitter.png');
+        image:url(image-path('/assets/twitter.png'));
       }
     }
     &.facebook {
       width:10px;
       margin-left:30px;
       background:{
-        image:url('/assets/facebook.png');
+        image:url(image-path('/assets/facebook.png'));
       }
     }
   }
