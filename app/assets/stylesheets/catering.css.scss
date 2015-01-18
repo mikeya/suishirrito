@@ -1,5 +1,5 @@
 @import "variables";
-.catering {
+.catering, .jobs {
   padding-bottom:60px;
   .yellow{
     padding-bottom:40px;
@@ -16,6 +16,24 @@
       }
     }
   }
+  .radios {
+    label {
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 16px;
+      color: white;
+    }
+    > div{
+      margin-bottom:10px;
+    }
+  }
+
+  textarea.form-control{
+    height:500px;
+    width:90%;
+    margin:0 auto 20px;
+  }
+
   button.btn-info, button.btn-info:focus, button.btn-info:active, button.btn-default, button.btn-default:focus, button.btn-default:active{
     margin:0 0 20px 20px;
     padding:10px 60px;

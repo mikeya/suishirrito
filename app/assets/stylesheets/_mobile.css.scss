@@ -64,7 +64,7 @@ body {
         display:none;
       }
     }
-    .catering{
+    .catering, .jobs{
       margin-top:20px;
       padding-bottom:0px;
       button.btn-info, button.btn-info:focus, button.btn-info:active, button.btn-default, button.btn-default:focus, button.btn-default:active{
@@ -74,6 +74,12 @@ body {
       .pickup{
         button.btn-info, button.btn-default {
           width:100%;
+        }
+      }
+      .radios{
+        padding:0px;
+        label{
+          font-size:14px;
         }
       }
       .btn-default.center-block{

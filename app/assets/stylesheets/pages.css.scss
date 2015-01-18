@@ -48,9 +48,12 @@ h3{
 
 label{
   color:$white;
+  font-family: 'Questrial', sans-serif;
+  font-weight: 400;
+
 }
 
-p, span, a, h4,button {
+p, span, a, h4,button{
   font-family: 'Questrial', sans-serif;
   color:$brown;
 }
