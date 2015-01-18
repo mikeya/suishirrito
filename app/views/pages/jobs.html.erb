@@ -9,8 +9,8 @@
             <h3 class="brown text-center header">Employement Application Form</h3>
             <p class="text-center header"><b>Select desired employment location:</b></p>
             <div class="text-center">
-                <button class="btn btn-info delivery_btn" data-type="delivery">San Francisco</button>
-                <button class="btn btn-info pickup_btn" data-type="pickup">Palo Alto</button>
+                <button class="btn btn-info sf_btn" data-type="san_francisco">San Francisco</button>
+                <button class="btn btn-info pa_btn" data-type="palo_alto">Palo Alto</button>
                 <input name="location" id="location" type="hidden"/>
             </div>
             <hr/>
@@ -47,3 +47,26 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function(){
+        $('.sf_btn, .pa_btn').on('click',function(){
+            $(this).toggleClass('btn-info btn-default');
+            if($(this).hasClass('btn-info')){
+                $('#location').val('');
+            }else if($(this).hasClass('btn-default')){
+                $('#location').val($(this).data('type'));
+            }
+            $('.'+$(this).data('type')).slideToggle();
+        });
+
+        $('.sf_btn').on('click',function(){
+            $('.pa_btn').removeClass('btn-default').addClass('btn-info');
+        });
+
+        $('.pa_btn').on('click',function(){
+            $('.sf_btn').removeClass('btn-default').addClass('btn-info');
+        });
+
+    });
+</script>

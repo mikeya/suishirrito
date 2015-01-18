@@ -93,6 +93,16 @@ body {
         min-height:100%;
       }
     }
+
+    .about{
+      h2{
+        margin:20px 0;
+      }
+      text-align:center;
+      .hero{
+        display:none;
+      }
+    }
     .contact_container button{
       width:100%;
     }
