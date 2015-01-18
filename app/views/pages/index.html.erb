@@ -1,47 +1,58 @@
-<div class="hero clearfix">
-    <div class="container">
-        <div class="col-md-7">
-            <h1><span>Sushirrito<sup>&reg;</sup></span> - The original Sushi Burrito concept!</h1>
-            <p>Revolutionizing sushi culture with made-to-order, hand-held Sushi Burritos in delicious Asian and Latin flavor combinations.</p>
-        </div>
-        <div class="col-md-5 hand-1"></div>
-    </div>
-</div>
-
-<div class="white clearfix orders">
-    <div class="container">
-        <div class="col-md-7">
-            <%= image_tag("home_food.jpg") %>
-        </div>
-        <div class="col-md-5">
-            <h3>Our Food</h3>
-            <p>We strive to challenge the status quo of sushi restaurants through creativity and innovation of flavors, form, and sourcing.</p>
-            <button class="btn btn-default"><a href="">Learn More</a></button>
-        </div>
-        <div class="col-md-12"></div>
-        <div class="col-md-5">
-            <h3>Catering</h3>
-            <p>Make your next meeting or party a hit. Introducing fast, fresh, filling and eco-friendly sushi...a fresh way to roll!</p>
-            <button class="btn btn-default"><a href="">Order Now</a></button>
-        </div>
-        <div class="col-md-7">
-            <%= image_tag("home_catering.jpg") %>
+<style>
+    .dark{
+        display:block !important;
+    }
+</style>
+<div class="home">
+    <div class="hero clearfix dashed-btm">
+        <div class="container">
+            <div class="col-md-7">
+                <h1><span>Sushirrito<sup>&reg;</sup></span> - The original Sushi Burrito concept!</h1>
+                <p>Revolutionizing sushi culture with made-to-order, hand-held Sushi Burritos in delicious Asian and Latin flavor combinations.</p>
+            </div>
+            <div class="col-md-5 hand-1"></div>
         </div>
     </div>
-</div>
 
-<div class="texture clearfix">
-    <div class="container">
-        <div class="col-md-12 col-centered text-center">
-            <h3>The Sushi Burrito</h3>
-            <p>On January 18th, 2011, Sushirrito<sup>&reg;</sup> launch the world's first sushi burrito restaurant concept. We have spent, and will continue
-            to spend, countless hours creating and testing sushi burritos unique to the Sushirrito brand. fusion sustainable seafood responsibly
-            sourced fast casual.</p>
-            <p>Hand-held portable made-to-order asian latin fresh ingredients high quality ingredients local when possible?
-            efficient/fast Multi-unit (Not a chain or franchise) Small business San Francisco founded Original Restaurant large
-            uncut food first efficient revolution</p>
+    <div class="white clearfix orders">
+        <div class="container">
+            <div class="col-md-7">
+                <%= image_tag("home_food.jpg") %>
+            </div>
+            <div class="col-md-5">
+                <h3>Our Food</h3>
+                <p>We strive to challenge the status quo of sushi restaurants through creativity and innovation of flavors, form, and sourcing.</p>
+                <button class="btn btn-default"><%= link_to "Learn More", "/food"%></button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-md-8 col-md-push-4">
+                <%= image_tag("home_catering.jpg") %>
+            </div>
+            <div class="col-md-4 col-md-pull-8">
+                <h3>Catering</h3>
+                <p>Make your next meeting or party a hit. Introducing fast, fresh, filling and eco-friendly sushi...a fresh way to roll!</p>
+                <button class="btn btn-default"><%= link_to "Order Now", "/catering"%></button>
+            </div>
+
         </div>
     </div>
-</div>
 
-<%= render "shared/locations" %>
+    <div class="texture clearfix dashed-btm dashed-top">
+        <div class="container">
+            <div class="col-md-12 col-centered text-center">
+                <h3>The Sushi Burrito</h3>
+                <p>Feeling constrained by pricey, time-consuming sit-down sushi restaurants and pre-made options that lacked
+                    quality and originality, the Sushi Burrito was born as a better way to serve sushi and to combine two of
+                    the Bay Area’s favorite foods: sushi and burritos.</p>
+                <p>Sushirrito<sup>&reg;</sup>, a San Francisco brand, is the world’s first sushi burrito restaurant concept. With four
+                    locations in San Francisco and Palo Alto, the restaurant offers fast, fresh, filling and eco-friendly
+                    sushi. Sharing our food and concept, while continuing to change the way people perceive and eat quality
+                    sushi—that’s what really drives us!</p>
+            </div>
+        </div>
+    </div>
+
+    <%= render "shared/locations" %>
+
+</div>

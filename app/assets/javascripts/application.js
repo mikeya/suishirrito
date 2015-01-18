@@ -11,20 +11,16 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
-//= require bootstrap
-//= require turbolinks
+
 //= require_tree .
 
 $(document).ready(function(){
-    $('.about').on('click',function(){
-        $(this).toggleClass('current');
-       $('.about_nav_container').slideToggle();
-    });
-
     $('.contact').on('click',function(){
         $(this).toggleClass('current');
         $('.contact_container').slideToggle();
     });
 });
 
+//= require turbolinks

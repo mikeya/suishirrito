@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVqjpx3iTNBBe9cs4r8leIJpn4mq147u4"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -14,25 +14,53 @@
         <div class="texture">
             <div class="container">
                 <div class="col-md-5 col-centered logo">
-                    <%= image_tag("logo.png") %>
+                    <%= link_to '/'  do %>
+                        <%= image_tag("logo.png") %>
+                    <% end %>
+
                 </div>
             </div>
             <div class="dark clearfix">
                 <div class="container">
-                    <div class="col-md-10 col-centered text-center nav">
-                        <div class="col-md-2 "><%= link_to "Food", "/food", class: cp('/food')%></div>
-                        <div class="col-md-2"><%= link_to "Locations", "/locations", class: cp('/locations')%></div>
-                        <div class="col-md-2"><%= link_to "Catering", "/catering", class: cp('/catering')%></div>
-                        <div class="col-md-2"><%= link_to "About Us", "#about", class: 'about' %></div>
-                        <div class="col-md-2"><%= link_to "Contact", "#contact", class:'contact' %></div>
-                        <div class="col-md-2"><%= link_to "Jobs", "/jobs", class: cp('/jobs')%></div>
+                    <div class="col-md-10 text-center nav col-md-offset-1">
+                        <div class="col-md-2 col-xs-4">
+                            <%= link_to '/food', class: cp('/food') do %>
+                                <%= image_tag('m_food_icon.png') %>
+                                Food
+                            <% end %>
+                        </div>
+                        <div class="col-md-2 col-xs-4">
+                            <%= link_to "/locations", class: cp('/locations')  do %>
+                                <%= image_tag('m_locations_icon.png') %>
+                                Locations
+                            <% end %>
+                        </div>
+                        <div class="col-md-2 col-xs-4">
+                            <%= link_to "/catering", class: cp('/catering') do %>
+                                <%= image_tag('m_catering_icon.png') %>
+                                Catering
+                            <% end %>
+                        </div>
+                        <div class="col-md-2 col-xs-4">
+                            <%= link_to "/about", class: cp('/about') do %>
+                                <%= image_tag('m_aboutus_icon.png') %>
+                                About Us
+                            <% end %>
+                        </div>
+                        <div class="col-md-2 col-xs-4">
+                            <%= link_to "#contact", class:'contact' do %>
+                                <%= image_tag('m_contact_icon.png') %>
+                                Contact
+                            <% end %>
+                        </div>
+                        <div class="col-md-2 col-xs-4">
+                            <%= link_to "/jobs", class: cp('/jobs') do %>
+                                <%= image_tag('m_jobs_icon.png') %>
+                                Jobs
+                            <% end %>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="yellow about_nav_container">
-            <div class="container">
-                <%= render "shared/about_nav" %>
             </div>
         </div>
        <%= yield %>
@@ -60,10 +88,10 @@
 
 <footer>
     <div class="container">
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-7">
             <span>&copy; 2008-2014 SUSHIRRITO</span>
         </div>
-        <div class="col-md-6 col-md-offset-3 links">
+        <div class="col-md-6 col-md-offset-3 col-xs-5 links">
             <%= render "shared/about_nav" %>
         </div>
     </div>

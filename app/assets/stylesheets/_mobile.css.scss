@@ -1,0 +1,94 @@
+@import "bootstrap";
+body {
+  @media (max-width: $screen-md-min) {
+    h2{
+      font-size:24px;
+      margin-top:0px;
+    }
+    .container{
+      padding-left: 0px;
+      padding-right:0px;
+    }
+    .dark {
+      background: none;
+      display:none;
+    }
+    .logo {
+      padding: 20px 0;
+      img {
+        width: 80%;
+      }
+    }
+    .nav {
+      div {
+        margin-bottom: 20px;
+      }
+      img {
+        display: block;
+      }
+    }
+    .orders {
+      text-align: center;
+    }
+
+    .directions {
+      > div {
+        margin-bottom: 60px;
+      }
+      .col-md-3 {
+        height: auto;
+        button {
+          position: relative;
+          bottom: auto;
+          width: 100%;
+          left: auto;
+          margin: 20px 0;
+        }
+      }
+    }
+
+    .food {
+      text-align:center;
+      margin:20px 0;
+      .hand-1{
+        display:none;
+      }
+
+    }
+    .locations .directions{
+      text-align:center;
+      h4, p{
+        font-size:24px;
+      }
+      button.locations{
+        display:none;
+      }
+    }
+    .catering{
+      margin-top:20px;
+      padding-bottom:0px;
+      button.btn-info, button.btn-info:focus, button.btn-info:active, button.btn-default, button.btn-default:focus, button.btn-default:active{
+        margin:0 0 20px 0;
+        padding:10px 50px;
+      }
+      .pickup{
+        button.btn-info, button.btn-default {
+          width:100%;
+        }
+      }
+      .btn-default.center-block{
+        padding:10px;
+        width:100%;
+      }
+    }
+    .menu{
+      margin-bottom:40px;
+      .col-md-4{
+        min-height:100%;
+      }
+    }
+    .contact_container button{
+      width:100%;
+    }
+  }
+}

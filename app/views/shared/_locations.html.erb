@@ -2,7 +2,9 @@
 
 <div class="white clearfix directions">
     <div class="container">
-        <h2>Sushirrito<sup>&reg;</sup> Locations - Come roll with us!</h2>
+        <div class="col-md-12">
+            <h2>Sushirrito Locations Come roll with us!</h2>
+        </div>
         <div class="loc-container">
             <div class="col-md-3">
                 <h4>Fidi</h4>
@@ -11,11 +13,18 @@
                 <div class="hours">
                     <p><span>Monday thru Friday </span>11-3</p>
                 </div>
-                <button class="btn btn-default"><a href="">View Menu</a></button>
+                <button class="btn btn-default locations">
+                    <%= link_to "View Menu", "/food/sf"%>
+                </button>
+                <button class="btn btn-default home">
+                    <%= link_to "Get Directions", "/locations"%>
+                </button>
             </div>
 
             <div class="col-md-9">
-                <div id="map-fidi"></div>
+                <a href="https://goo.gl/maps/DHT2y" target="_blank">
+                    <div id="map-fidi"></div>
+                </a>
             </div>
         </div>
         <div class="loc-container">
@@ -26,10 +35,17 @@
             <div class="hours">
                 <p><span>Monday thru Friday </span>11-3</p>
             </div>
-            <button class="btn btn-default"><a href="">View Menu</a></button>
+            <button class="btn btn-default locations">
+                <%= link_to "View Menu", "/food/sf"%>
+            </button>
+            <button class="btn btn-default home">
+                <%= link_to "Get Directions", "/locations"%>
+            </button>
         </div>
         <div class="col-md-9">
-            <div id="map-soma"></div>
+            <a href="https://goo.gl/maps/zr1Wx" target="_blank">
+                <div id="map-soma"></div>
+            </a>
         </div>
         </div>
         <div class="loc-container">
@@ -38,14 +54,21 @@
             <p>226 Kearny Street San Francisco, CA 94108</p>
             <p>415-544-9869</p>
             <div class="hours">
-                <p><span>Monday thur Thursday </span>11-4</p>
+                <p><span>Monday thru Thursday </span>11-4</p>
                 <p><span>Friday </span>11-7</p>
                 <p><span>Saturday </span>12-4</p>
             </div>
-            <button class="btn btn-default"><a href="">View Menu</a></button>
+            <button class="btn btn-default locations">
+                <%= link_to "View Menu", "/food/sf"%>
+            </button>
+            <button class="btn btn-default home">
+                <%= link_to "Get Directions", "/locations" %>
+            </button>
         </div>
         <div class="col-md-9">
-            <div id="map-us"></div>
+            <a href="https://goo.gl/maps/e7VuV" target="_blank">
+                <div id="map-us"></div>
+            </a>
         </div>
         </div>
         <div class="loc-container">
@@ -53,12 +76,19 @@
             <h4>Palo Alto</h4>
             <p>448 University Avenue Palo Alto, CA 94301</p>
             <div class="hours">
-                <h3>Opening Winter 2014</h3>
+                <p><span>Daily </span>11-9</p>
             </div>
-            <button class="btn btn-default"><a href="">View Menu</a></button>
+            <button class="btn btn-default locations">
+                <%= link_to "View Menu", "/food/pa"%>
+            </button>
+            <button class="btn btn-default home">
+                <%= link_to "Get Directions", "/locations"%>
+            </button>
         </div>
         <div class="col-md-9">
-            <div id="map-pa"></div>
+            <a href="https://goo.gl/maps/2oSDY" target="_blank">
+                <div id="map-pa"></div>
+            </a>
         </div>
         </div>
     </div>

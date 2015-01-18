@@ -2,21 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'bootstrap';
+@import "variables";
 @import url(http://fonts.googleapis.com/css?family=Questrial|Days+One);
-
-$orange: #DE5D31;
-$yellow: #F8AF4B;
-$brown: #744A25;
-$green:#AEB341;
-$white: #FFFFFF;
-$black: #000000;
-$red: #D6664A;
 
 div.yellow {
   background-color:$yellow;
-}
-body {
-  background:$black;
 }
 .container-fluid{
   background:$white;
@@ -75,7 +65,7 @@ a{
     text-decoration: none;
   }
   &.current {
-    color:$brown !important;
+    color:$yellow !important;
   }
 }
 
@@ -86,7 +76,11 @@ hr {
 }
 
 .logo {
-  padding: 60px 0;
+  padding: 30px 0;
+  img{
+    display:block;
+    margin:0 auto;
+  }
 }
 
 .dark {
@@ -96,8 +90,14 @@ hr {
 
 .nav {
   white-space: nowrap;
+  padding-right:0px;
   a{
     font-size: 18px;
+  }
+  img{
+    width:auto;
+    margin: 0 auto 10px;
+    display:none;
   }
 }
 
@@ -112,7 +112,7 @@ img {
 
 .texture {
   background: {
-    image:url(image-path('texture.jpg'));
+    image:url(image-path('texture.png'));
     size: cover;
   }
   p,a,span {
@@ -126,17 +126,24 @@ img {
   }
 }
 
+.dashed-btm{
+  border-bottom:1px dashed $yellow;
+}
+.dashed-top{
+  border-top:1px dashed $yellow;
+}
+
 .hero {
   background: {
-    image:url(image-path('hero_bg.jpg'));
+    image:url(image-path('hero_bg.png'));
     size: cover;
   }
   margin-bottom: 40px;
-  border-bottom:1px dashed $yellow;
+
   h1 {
     color:$brown;
     font-size:42px;
-    margin-top:50px;
+    margin-top:20px;
     span {
       color: $orange;
       font-family: 'Days One', sans-serif;
@@ -159,7 +166,7 @@ img {
 }
 
 .hand-1 {
-  height: 400px;
+  height: 260px;
   background:{
     image:url(image-path('sumo_hand1.png'));
   }
@@ -176,10 +183,9 @@ img {
     width:85%;
     margin-bottom: 20px;
   }
-  .col-md-12 {
-    margin-bottom:20px;
+  .container{
+    margin-bottom:40px;
   }
-  margin-bottom:40px;
 }
 
 .directions {
@@ -189,6 +195,7 @@ img {
   }
   h4 {
     color: $orange;
+    font-size:16px;
   }
   p {
     font-size:16px;
@@ -203,13 +210,20 @@ img {
   }
   button {
     width:100%;
-    bottom:0px;
-    left:0px;
-    position:relative;
-    margin-bottom: 20px;
   }
   > div {
-    margin-bottom: 40px;
+    margin-bottom:40px;
+  }
+  .col-md-3 {
+    height: 250px;
+    position: relative;
+    button {
+      position: absolute;
+      bottom:0;
+      width:90%;
+      left: 50%;
+      margin-left: -45%;
+    }
   }
   .col-md-9 {
     display:none;
@@ -221,6 +235,14 @@ img {
   }
   .direction-ctas button{
     margin-bottom:40px;
+  }
+}
+
+.home{
+  .directions {
+    .locations {
+      display:none;
+    }
   }
 }
 
@@ -268,7 +290,7 @@ button.btn-info, button.btn-info:focus, button.btn-info:active {
 
 
 .contact_container {
-  padding-bottom:40px;
+  padding-bottom:50px;
   background-color:$yellow;
   display: none;
   h2{
@@ -286,11 +308,12 @@ button.btn-info, button.btn-info:focus, button.btn-info:active {
 }
 
 footer {
-  height:80px;
-  padding-top:30px;
+  padding: 10px 0;
   background:$black;
   span{
     color:$white;
+    font-size:12px;
+    white-space: nowrap;
   }
   .about_nav {
     text-align: right;
@@ -309,6 +332,9 @@ footer {
     display: inline-block;
     vertical-align: middle;
     color:$white;
+    &.current {
+      color:$brown !important;
+    }
     &:first-child{
       margin:0px;
     }
@@ -335,7 +361,7 @@ footer {
     }
     &.facebook {
       width:10px;
-      margin-left:30px;
+      margin-left:0px;
       background:{
         image:url(image-path('facebook.png'));
       }

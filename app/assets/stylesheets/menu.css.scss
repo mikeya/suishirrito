@@ -1,4 +1,4 @@
-@import 'pages';
+@import "variables";
 .menu {
   text-align: center;
   p{
@@ -13,6 +13,7 @@
     margin-bottom:20px;
   }
   .col-md-4{
+    min-height: 410px;
     h4{
       color:$orange;
       font-size:20px;
