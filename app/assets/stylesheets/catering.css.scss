@@ -1,15 +1,21 @@
 @import "variables";
 .catering, .jobs {
   padding-bottom:60px;
+  i.catering{
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+  }
   .yellow{
     padding-bottom:40px;
     clear:left;
   }
   p {
-    margin:0 0 20px 0;
+    margin:0 auto 20px;
     color:$white;
+    max-width: 83.3333%;
     &.header {
-      margin:20px 0 10px;
+      margin:20px auto 10px;
       b {
         font-family: 'Days One', sans-serif;
         font-weight:500;
@@ -75,9 +81,7 @@
     p{
       display:inline-block;
       margin:0;
-      &.small {
-        margin:0px;
-      }
+      line-height: 1;
     }
     input{
       display:inline-block;

@@ -1,13 +1,11 @@
-@import "bootstrap";
 body {
-  @media (max-width: $screen-md-min) {
+  @media (max-width: $screen-sm) {
+    .hero{
+      display:none;
+    }
     h2{
       font-size:24px;
       margin-top:0px;
-    }
-    .container{
-      padding-left: 0px;
-      padding-right:0px;
     }
     .dark {
       background: none;
@@ -35,7 +33,7 @@ body {
       > div {
         margin-bottom: 60px;
       }
-      .col-md-3 {
+      .col-sm-3 {
         height: auto;
         button {
           position: relative;
@@ -89,7 +87,7 @@ body {
     }
     .menu{
       margin-bottom:40px;
-      .col-md-4{
+      .col-sm-4{
         min-height:100%;
       }
     }
@@ -104,10 +102,15 @@ body {
       }
     }
     .contact_container {
+      display: block;
+      position: absolute;
+      width: 100%;
+      z-index: 999;
+      top: 160px;
+      left: 0px;
       button{
         width:100%;
       }
-
       h2{
         margin:20px 0;
       }

@@ -1,7 +1,7 @@
 // Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
+// They will automatically be included in application.css.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import 'bootstrap';
+
 @import "variables";
 @import url(http://fonts.googleapis.com/css?family=Questrial|Days+One);
 body{
@@ -10,7 +10,8 @@ body{
 div.yellow {
   background-color:$yellow;
 }
-.container-fluid{
+
+.container-fluid.white{
   background:$white;
 }
 
@@ -188,7 +189,7 @@ img {
     width:85%;
     margin-bottom: 20px;
   }
-  .container{
+  .container-fluid{
     margin-bottom:40px;
   }
 }
@@ -219,7 +220,7 @@ img {
   > div {
     margin-bottom:40px;
   }
-  .col-md-3 {
+  .col-sm-3 {
     height: 250px;
     position: relative;
     button {
@@ -230,7 +231,7 @@ img {
       margin-left: -45%;
     }
   }
-  .col-md-9 {
+  .col-sm-9 {
     display:none;
   }
   .hours {
@@ -257,7 +258,7 @@ button.btn-default, button.btn-default:focus, button.btn-default:active {
   border-radius:0;
   padding:5px 30px;
   color:$white;
-  border-color:#ACA9B2;
+  border-color:#aeb341;
   font-size:18px;
   outline:0;
   a{

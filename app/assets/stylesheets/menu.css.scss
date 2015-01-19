@@ -9,11 +9,11 @@
     border-bottom:1px solid grey;
     margin-bottom:20px;
   }
-  .container:last-child{
+  .container-fluid:last-child{
     margin-bottom:20px;
   }
-  .col-md-4{
-    min-height: 410px;
+  .col-sm-4{
+    min-height: 450px;
     h4{
       color:$orange;
       font-size:20px;
