@@ -21,6 +21,10 @@ $(document).ready(function(){
         $(this).toggleClass('current');
         $('.contact_container').slideToggle();
     });
+    $('.close').on('click', function(){
+        $('.contact_container').slideToggle();
+        $('.contact').toggleClass('current');
+    });
 });
 
 //= require turbolinks
