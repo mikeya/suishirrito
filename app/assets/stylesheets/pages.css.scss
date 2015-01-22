@@ -5,7 +5,7 @@
 @import "variables";
 @import url(http://fonts.googleapis.com/css?family=Questrial|Days+One);
 body{
-  background: $black;
+  background: $white;
 }
 div.yellow {
   background-color:$yellow;
@@ -99,6 +99,7 @@ hr {
   padding-right:0px;
   a{
     font-size: 18px;
+    cursor: pointer;
   }
   img{
     width:auto;
@@ -237,6 +238,12 @@ img {
   .hours {
     p {
       margin:0;
+      span{
+        display:inline-block;
+        &:last-child{
+          color:$brown;
+        }
+      }
     }
   }
   .direction-ctas button{
@@ -265,6 +272,8 @@ button.btn-default, button.btn-default:focus, button.btn-default:active {
     color:$white;
     font-size:18px;
     outline:0;
+    display: block;
+    width:100%;
   }
   &:hover {
     background-color:$green;
@@ -283,6 +292,8 @@ button.btn-info, button.btn-info:focus, button.btn-info:active {
     color:$red;
     font-size:18px;
     outline:0;
+    display: block;
+    width:100%;
     &:hover {
       color:$red;
     }
@@ -316,12 +327,19 @@ button.btn-info, button.btn-info:focus, button.btn-info:active {
     position: absolute;
     top:10px;
     right:10px;
+    color:$black;
+    &:hover{
+      opacity: 0.8;
+    }
   }
 }
 
 footer {
   padding: 10px 0;
   background:$black;
+  position:fixed;
+  bottom:0px;
+  width:100%;
   span{
     color:$white;
     font-size:12px;

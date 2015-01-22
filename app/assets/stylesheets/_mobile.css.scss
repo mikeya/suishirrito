@@ -1,5 +1,7 @@
+
 body {
   @media (max-width: $screen-sm) {
+    background:$black !important;
     .hero{
       display:none;
     }
@@ -10,6 +12,7 @@ body {
     .dark {
       background: none;
       display:none;
+      height: 360px;
     }
     .logo {
       padding: 20px 0;
@@ -25,11 +28,9 @@ body {
         display: block;
       }
     }
-    .orders {
-      text-align: center;
-      padding-top: 20px;
-
-    }
+   .home{
+     display:none;
+   }
 
     .directions {
       > div {
@@ -108,7 +109,7 @@ body {
       position: absolute;
       width: 100%;
       z-index: 999;
-      top: 100px;
+      top: 90px;
       left: 0px;
       button{
         width:100%;
