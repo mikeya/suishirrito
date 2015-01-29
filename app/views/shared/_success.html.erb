@@ -1,0 +1,7 @@
+<% unless flash[target].nil? %>
+    <div class="alert alert-success success" role="alert">
+        <% flash.each do |name, msg| %>
+            <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        <% end %>
+    </div>
+<% end %>

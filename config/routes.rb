@@ -14,11 +14,9 @@ Rails.application.routes.draw do
 
   get '/about', to: 'pages#about'
 
-  post '/contact_message', to: 'form#contact_message'
-
-  post '/job_application', to: 'form#job_application'
-
-  post '/catering_request', to: 'form#catering_request'
+  resources :contact_messages
+  resources :job_applications
+  resources :catering_requests
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -30,17 +30,17 @@ class PagesController < ApplicationController
   end
 
   def catering
+    @catering_request = CateringRequest.new
     @title ='Sushirrito - Catering'
     @description ='Sushirrito offers online catering orders for your special gathering or corporate event.'
     @keywords ='Sushirrito event catering, Sushirrito catering, sushi catering, sushi events, corporate parties, corporate events, sushi delivery'
-
   end
 
   def jobs
+    @job_application = JobApplication.new
     @title ='Sushirrito - Jobs'
     @description ='Sushirrito is challenging conventional Japanese cuisine and revamping the current sushi landscape as we know it! We are seeking innovative and eager people to work within an exciting and ambitious environment.'
     @keywords ='job, jobs, jobs at sushirrito, employment at sushirrito, employment san francisco, hiring san francisco, jobs in san francisco, sushi restaurant job san francisco, sushi restaurant job'
-
   end
 
   def about
