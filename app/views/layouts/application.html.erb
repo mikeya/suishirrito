@@ -75,17 +75,20 @@
         <span class="glyphicon glyphicon-remove close"></span>
         <h2 class="text-center black">Contact Us</h2>
         <p class="text-center white">If you have any questions or just want to say Hello, we would love to hear from you!</p>
-        <form action="/contact_message" method="post">
+        <%= form_tag("/contact_message", method: "post") do %>
+            <% flash.each do |name, msg| %>
+                <%= content_tag :div, msg, class: name %>
+            <% end %>
             <div class="col-sm-5">
-                <div class="form-group"><label for="name">Name*</label><input type="text" name="name" id="name" class="form-control"/></div>
-                <div class="form-group"><label for="email">Email*</label><input type="text" name="email" id="email" class="form-control"/></div>
-                <div class="form-group"><label for="phone">Phone*</label><input type="text" name="phone" id="phone" class="form-control"/></div>
+                <div class="form-group"><label for="name">Name*</label><input type="text" name="name" id="name" class="form-control" required/></div>
+                <div class="form-group"><label for="email">Email*</label><input type="text" name="email" id="email" class="form-control" required/></div>
+                <div class="form-group"><label for="phone">Phone*</label><input type="text" name="phone" id="phone" class="form-control" required/></div>
             </div>
             <div class="col-sm-7">
                 <div class="form-group"><label for="message">Message*</label><textarea name="message" class="form-control"></textarea></div>
                 <button class="btn btn-default" type="submit">Send</button>
             </div>
-        </form>
+        <% end %>
 
     </div>
 </div>

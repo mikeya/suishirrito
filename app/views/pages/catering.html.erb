@@ -4,7 +4,7 @@
     <p class="brown text-center">Perfect for any business meeting, event or party - serving as few as 5 or as many as 200. Make your next meeting or party a hit. Introducing fast, fresh, filling and eco-friendly sushi..a fresh way to roll!</p>
     <p class="orange text-center">Please fill out this form or call (415) 429-7611 to place your catering order!</p>
     </div>
-    <form action="/catering_request" method="post">
+    <%= form_tag("/catering_request", method: "post") do %>
         <div class="yellow container-fluid">
             <div class="col-sm-12">
                 <h3 class="brown text-center header">Catering Request Form</h3>
@@ -138,7 +138,7 @@
                 <button class="btn btn-default center-block" type="submit">Submit Catering Request</button>
             </div>
         </div>
-    </form>
+    <% end %>
 </div>
 
 <script>

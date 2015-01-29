@@ -1,19 +1,25 @@
 class FormController < ApplicationController
   def contact_message
-    print params
-    flash[:success] = "Thanks! I'll be in touch soon!"
-    redirect_to '/jobs'
+    FormMailer.contact_email(params).deliver
+    flash[:success] = "Thanks! We'll be in touch soon!"
+    redirect_to request.referer
   end
 
   def job_application
-    print params
+    FormMailer.job_email(params).deliver
     flash[:success] = "Thanks! I'll be in touch soon!"
     redirect_to '/jobs'
   end
 
   def catering_request
-    print params
+    FormMailer.catering_email(params).deliver
     flash[:success] = "Thanks! I'll be in touch soon!"
-    redirect_to '/jobs'
+    redirect_to '/catering'
   end
+
+  private
+  def validate_params(params)
+
+  end
+
 end
