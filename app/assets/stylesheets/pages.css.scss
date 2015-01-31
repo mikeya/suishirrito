@@ -232,7 +232,7 @@ img {
     color:$orange;
     font-family: 'Questrial', sans-serif;
   }
-  button {
+  .btn {
     width:100%;
   }
   > div {
@@ -241,7 +241,7 @@ img {
   .col-sm-3 {
     height: 250px;
     position: relative;
-    button {
+    .btn {
       position: absolute;
       bottom:0;
       width:90%;
@@ -263,7 +263,7 @@ img {
       }
     }
   }
-  .direction-ctas button{
+  .direction-ctas .btn{
     margin-bottom:40px;
   }
 }
@@ -277,7 +277,7 @@ img {
 }
 
 
-button.btn-default, button.btn-default:focus, button.btn-default:active {
+.btn-default, .btn-default:focus, .btn-default:active {
   background-color:$green;
   border-radius:0;
   padding:5px 30px;
@@ -285,19 +285,13 @@ button.btn-default, button.btn-default:focus, button.btn-default:active {
   border-color:#aeb341;
   font-size:18px;
   outline:0;
-  a{
-    color:$white;
-    font-size:18px;
-    outline:0;
-    display: block;
-    width:100%;
-  }
+
   &:hover {
     background-color:$green;
   }
 }
 
-button.btn-info, button.btn-info:focus, button.btn-info:active {
+.btn-info, .btn-info:focus, .btn-info:active {
   background-color:$white;
   border-radius:3px;
   padding:5px 30px;
@@ -305,16 +299,10 @@ button.btn-info, button.btn-info:focus, button.btn-info:active {
   border-color:#ACA9B2;
   font-size:18px;
   outline:0;
-  a{
+  &:hover {
     color:$red;
-    font-size:18px;
-    outline:0;
-    display: block;
-    width:100%;
-    &:hover {
-      color:$red;
-    }
   }
+
   &:hover {
     color:$red;
     background-color:$white;
@@ -337,7 +325,7 @@ button.btn-info, button.btn-info:focus, button.btn-info:active {
   textarea {
     min-height: 185px;
   }
-  button {
+  .btn {
     float:right;
   }
   .close{
