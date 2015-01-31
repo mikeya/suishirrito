@@ -11,8 +11,12 @@ div.yellow {
   background-color:$yellow;
 }
 
-.container-fluid.white{
-  background:$white;
+.container-fluid{
+  max-width: 1024px;
+  &.white{
+    background:$white;
+    max-width:100%;
+  }
 }
 
 .center-block {

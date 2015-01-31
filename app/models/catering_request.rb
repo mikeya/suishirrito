@@ -14,10 +14,18 @@ class CateringRequest
   validates :phone, presence: true, length: { :minimum => 10, :maximum => 15 }
   validates :event_date, presence: true
   validates :order_type, presence: true
-  validates :delivery_address, presence: true, :if => ':order_type == "delivery"'
-  validates :delivery_time, presence: true, :if => ':order_type == "delivery"'
-  validates :pickup_location, presence: true, :if => ':order_type == "pickup"'
+  validates :delivery_address, presence: true, :if => 'order_type == "delivery"'
+  validates :delivery_time, presence: true, :if => 'order_type == "delivery"'
+  validates :pickup_location, presence: true, :if => 'order_type == "pickup"'
   validates :honeypot, presence: false
+  validates :satori_quantity,  numericality: true, allow_blank: true
+  validates :geishas_kiss_quantity,  numericality: true, allow_blank: true
+  validates :salmon_samba_quantity,  numericality: true, allow_blank: true
+  validates :sumo_crunch_quantity,  numericality: true, allow_blank: true
+  validates :porkivore_quantity,  numericality: true, allow_blank: true
+  validates :bonsai_salad_quantity,  numericality: true, allow_blank: true
+  validates :lava_nachos_quantity,  numericality: true, allow_blank: true
+  validates :diablo_sauce_quantity,  numericality: true, allow_blank: true
 
   def initialize(params={})
     @name = params[:name]

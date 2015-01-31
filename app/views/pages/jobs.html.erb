@@ -1,10 +1,10 @@
-<div class="jobs">
+<div class="jobs container-fluid">
     <div class="col-sm-12">
         <h2 class="text-center">Sushirrito's Hiring!</h2>
         <p class="brown text-center">Sushirrito® is challenging conventional Japanese cuisine and revamping the current sushi landscape as we know it! We are seeking innovative and eager people to work within an exciting and ambitious environment. Ultimately, candidates need to be excited about helping grow and expand this revolutionary concept. </p>
     </div>
     <%= form_for @job_application do |f| %>
-        <div class="yellow container-fluid">
+        <div class="yellow clearfix">
             <div class="col-sm-12">
                 <%= render "shared/success", :target => 'job_application'%>
                 <%= render "shared/errors", :target => @job_application %>
