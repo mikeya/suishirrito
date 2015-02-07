@@ -7,7 +7,8 @@ class CateringRequest
                 :delivery_address, :delivery_time, :pickup_location,
                 :satori_quantity, :geishas_kiss_quantity, :salmon_samba_quantity,
                 :sumo_crunch_quantity, :porkivore_quantity, :bonsai_salad_quantity,
-                :lava_nachos_quantity, :diablo_sauce_quantity, :honeypot
+                :lava_nachos_quantity, :diablo_sauce_quantity, :mayan_dragon_quantity,
+                :caballero_quantity, :buddha_belly_quantity, :honeypot
 
   validates :name, presence: true, length: { maximum: 30 }
   validates :email, presence: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
@@ -26,6 +27,9 @@ class CateringRequest
   validates :bonsai_salad_quantity,  numericality: true, allow_blank: true
   validates :lava_nachos_quantity,  numericality: true, allow_blank: true
   validates :diablo_sauce_quantity,  numericality: true, allow_blank: true
+  validates :buddha_belly_quantity,  numericality: true, allow_blank: true
+  validates :caballero_quantity,  numericality: true, allow_blank: true
+  validates :mayan_dragon_quantity,  numericality: true, allow_blank: true
 
   def initialize(params={})
     @name = params[:name]
@@ -45,6 +49,9 @@ class CateringRequest
     @bonsai_salad_quantity = params[:bonsai_salad_quantity]
     @lava_nachos_quantity = params[:lava_nachos_quantity]
     @diablo_sauce_quantity = params[:diablo_sauce_quantity]
+    @buddha_belly_quantity = params[:buddha_belly_quantity]
+    @caballero_quantity = params[:caballero_quantity]
+    @mayan_dragon_quantity = params[:mayan_dragon_quantity]
     @honeypot = params[:honeypot]
   end
 

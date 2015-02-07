@@ -28,6 +28,10 @@
       &:last-child{
         color:$orange;
         font-size: 18px;
+        position: absolute;
+        bottom: 10px;
+        width: 90%;
+
       }
     }
   }
