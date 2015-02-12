@@ -92,6 +92,11 @@ body {
       margin-bottom:40px;
       .col-sm-4{
         min-height:100%;
+        p:last-child{
+          position:relative;
+          width: 100%;
+          bottom:auto;
+        }
       }
     }
 

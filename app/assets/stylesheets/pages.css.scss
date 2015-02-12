@@ -6,6 +6,7 @@
 @import url(http://fonts.googleapis.com/css?family=Questrial|Days+One);
 body{
   background: $white;
+  padding-bottom:40px;
 }
 div.yellow {
   background-color:$yellow;
@@ -16,6 +17,7 @@ div.yellow {
   &.white{
     background:$white;
     max-width:100%;
+    padding-bottom:20px;
   }
 }
 
@@ -343,6 +345,9 @@ footer {
   padding: 10px 0;
   background:$black;
   width:100%;
+  position:fixed;
+  left:0px;
+  bottom:0px;
   span{
     color:$white;
     font-size:12px;
