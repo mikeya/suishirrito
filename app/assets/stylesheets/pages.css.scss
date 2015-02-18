@@ -241,7 +241,7 @@ img {
     margin-bottom:40px;
   }
   .col-sm-3 {
-    height: 250px;
+    min-height: 250px;
     position: relative;
     .btn {
       position: absolute;

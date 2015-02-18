@@ -42,9 +42,13 @@ $(document).ready(function(){
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
             if (target.length) {
-                $('html,body').animate({
-                    scrollTop: target.offset().top
-                }, 1000);
+                if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+                    window.scrollTo(target.offset().left,target.offset().top);
+                }else{
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                }
                 return false;
             }
         }

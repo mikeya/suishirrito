@@ -23,9 +23,16 @@
     .hours{
       margin-bottom:20px;
     }
+    .col-sm-3  .btn{
+       position: relative;
+       bottom: auto;
+       left: auto;
+       margin-left: 0;
+       margin-bottom:20px;
+    }
     .col-sm-9 {
       display:block;
-      height:250px;
+      min-height:250px;
       position: relative;
       div[id^='map']{
         width: 100%;

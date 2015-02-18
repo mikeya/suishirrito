@@ -1,7 +1,7 @@
 <div class="container-fluid catering">
     <div class="col-sm-12">
     <h2 class="text-center">Sushirrito Catering</h2>
-    <p class="brown text-center">Perfect for any business meeting, event or party - serving as few as 5 or as many as 200. Make your next meeting or party a hit. Introducing fast, fresh, filling and eco-friendly sushi..a fresh way to roll!</p>
+    <p class="brown text-center">Perfect for any business meeting, event or party - serving as few as 5 or as many as 200. Make your next meeting or party a hit. Serving fast, fresh, filling and eco-friendly sushi..a fresh way to roll!</p>
     <p class="orange text-center">Please fill out this form or call (415) 429-7611 to place your catering order!</p>
     </div>
     <%= form_for @catering_request do |f| %>
@@ -34,18 +34,18 @@
 
                     <p class="header"><b>Is your order for delivery or pick up?</b></p>
                     <p>Delivery is available in San Francisco only with a 10% service charge, at a minimum of $10. Catering orders for pick up must be picked up before noon.</p>
-                    <button type="button" class="btn btn-info delivery_btn" data-type="delivery">Delivery</button>
-                    <button type="button" class="btn btn-info pickup_btn" data-type="pickup">Pick Up</button>
+                    <a href="#delivery" class="btn btn-info delivery_btn" data-type="delivery">Delivery</a>
+                    <a href="#pickup" class="btn btn-info pickup_btn" data-type="pickup">Pick Up</a>
                     <%= f.text_field :order_type, class: 'hidden' %>
 
 
-                    <div class="delivery clearfix">
+                    <div class="delivery clearfix" id="delivery">
                         <p class="header"><b>Delivery details</b></p>
                         <div class="col-sm-6"><%= f.label :delivery_address %><%= f.text_field :delivery_address, class: 'form-control' %></div>
                         <div class="col-sm-6"><%= f.label :delivery_time, 'Delivery Time (between 11am and 3pm)'%><%= f.text_field :delivery_time, class: 'form-control' %></div>
                     </div>
 
-                    <div class="pickup clearfix">
+                    <div class="pickup clearfix" id="pickup">
                         <p class="header"><b>Select Pickup Location</b></p>
                         <button type="button" class="btn btn-info"><a>Sushirrito Fidi</a><span>475 Sansome Street</span></button>
                         <button type="button" class="btn btn-info"><a>Sushirrito Soma</a><span>59 New Montgomery Street</span></button>
@@ -57,8 +57,8 @@
 
                 <hr/>
                 <div class="text-center">
-                    <p class=" header"><b>Enter your menu item quantities</b></p>
-                    <p class="">There is a 5 item minimum for all catering orders</p>
+                    <p class=" header"><b>How many sushi burritos</b></p>
+                    <p class="">There is a 5 item minimum for pick up orders; 10 item minimum for delivery orders</p>
                 </div>
 
                 <div class="quantities clearfix">
