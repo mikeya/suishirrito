@@ -4,7 +4,6 @@ class FormMailer < ActionMailer::Base
   def contact_email(contact_message)
     @contact_message = contact_message
     mail(to:'eat@sushirrito.com', subject:'Sushirrito Contact Inquiry')
-    mail(to:'mikeabell2@gmail.com', subject:'Sushirrito Contact Inquiry')
   end
 
   def catering_email(catering_request)
