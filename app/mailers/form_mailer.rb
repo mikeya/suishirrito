@@ -13,6 +13,10 @@ class FormMailer < ActionMailer::Base
 
   def job_email(job_application)
     @job_application = job_application
-    mail(to: 'hr@sushirrito.com', subject:'Sushirrito Job Application')
+    if @job_application[:location] == 'san_francisco'
+        mail(to: 'hiring.sf@sushirrito.com', subject:'Sushirrito Job Application')
+    elsif @job_application[:location] == 'palo_alto'
+        mail(to: 'hiring.pa@sushirrito.com', subject:'Sushirrito Job Application')
+    end
   end
 end
