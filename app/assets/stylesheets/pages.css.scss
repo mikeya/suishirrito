@@ -73,7 +73,6 @@ p {
 
 a{
   &:hover{
-    color:$white;
     text-decoration: none;
   }
   &.current {
@@ -241,7 +240,7 @@ img {
     margin-bottom:40px;
   }
   .col-sm-3 {
-    min-height: 250px;
+    min-height: 280px;
     position: relative;
     .btn {
       position: absolute;

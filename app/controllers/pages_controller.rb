@@ -1,12 +1,12 @@
 class PagesController < ApplicationController
   def index
-    @title ='Sushirrito - The original Sushi Burrito concept!'
+    @title ='Sushirrito - The original sushi burrito concept!'
     @description ='Sushirrito® - The original Sushi Burrito concept!  Revolutionizing sushi culture with made-to-order, hand-held Sushi Burritos in delicious Asian and Latin flavor combinations.'
     @keywords ='sushirrito, sushi burrito, hand held sushi, sustainability-focused sushi, environmentally friendly sushi, sustainable fishing, eco-friendly sushi, eco friendly sushi'
   end
 
   def locations
-    @title ='Sushirrito - The original Sushi Burrito concept!'
+    @title ='Sushirrito - The original sushi burrito concept!'
     @description ='Sushirrito® - The original Sushi Burrito concept!  Revolutionizing sushi culture with made-to-order, hand-held Sushi Burritos in delicious Asian and Latin flavor combinations.'
     @keywords ='sushirrito, sushi burrito, hand held sushi, sustainability-focused sushi, environmentally friendly sushi, sustainable fishing, eco-friendly sushi, eco friendly sushi'
   end

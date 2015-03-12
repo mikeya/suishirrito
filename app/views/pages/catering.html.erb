@@ -1,7 +1,7 @@
 <div class="container-fluid catering">
     <div class="col-sm-12">
     <h2 class="text-center">Sushirrito Catering</h2>
-    <p class="brown text-center">Perfect for any business meeting, event or party - serving as few as 5 or as many as 200. Make your next meeting or party a hit. Serving fast, fresh, filling and eco-friendly sushi..a fresh way to roll!</p>
+    <p class="brown text-center">Perfect for any business meeting, event or party - serving as few as 5 or as many as 200. Make your next meeting or party a hit. Serving fast, fresh, filling and eco-friendly sushi...a fresh way to roll!</p>
     <p class="orange text-center">Please fill out this form or call (415) 429-7611 to place your catering order!</p>
     </div>
     <%= form_for @catering_request do |f| %>
@@ -47,9 +47,10 @@
 
                     <div class="pickup clearfix" id="pickup">
                         <p class="header"><b>Select Pickup Location</b></p>
-                        <button type="button" class="btn btn-info"><a>Sushirrito Fidi</a><span>475 Sansome Street</span></button>
-                        <button type="button" class="btn btn-info"><a>Sushirrito Soma</a><span>59 New Montgomery Street</span></button>
-                        <button type="button" class="btn btn-info"><a>Sushirrito Union Square</a><span>226 Kearny Street</span></button>
+                        <div class="col-sm-4 center-block"><p><%= f.label :pickup_time %><%= f.text_field :pickup_time, class: 'form-control' %></p></div>
+                        <div class="col-sm-4"><button type="button" class="btn btn-info"><a>Sushirrito Fidi</a><span>475 Sansome Street</span></button></div>
+                        <div class="col-sm-4"><button type="button" class="btn btn-info"><a>Sushirrito Soma</a><span>59 New Montgomery Street</span></button></div>
+                        <div class="col-sm-4"><button type="button" class="btn btn-info"><a>Sushirrito Union Square</a><span>226 Kearny Street</span></button></div>
                         <%= f.text_field :pickup_location, class: 'hidden' %>
                     </div>
 
